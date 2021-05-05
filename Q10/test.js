@@ -12,6 +12,15 @@ function printTable(){
         let num2=parseInt(document.getElementById("num2").value);
         console.log(num1);
         console.log(num2);
+        if(num1<num2){
+            let result=num1;
+            for(let i=1;result<num2;i++){
+                result=num1*i;
+                document.getElementById("result").innerHTML+=` ${result}`;
+            }
+        }else{
+            document.getElementById("result").innerHTML=`First number must be less than second number...`; 
+        }
     })
 
 }
